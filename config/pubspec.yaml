@@ -1,0 +1,48 @@
+name: todo_app
+description: Aplicación de Control de Tareas - Unidad 3 DAH
+
+publish_to: 'none'
+
+# ── Versión de la app (versionCode para Play Store) ──────────────────────────
+version: 1.0.0+1   # formato: version_name+version_code
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.3.2
+  path: ^1.9.0
+  intl: ^0.19.0
+  uuid: ^4.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  # ── Herramientas para publicación ────────────────────────────────────────
+  flutter_launcher_icons: ^0.14.1   # Genera íconos para Android/iOS
+  flutter_native_splash: ^2.4.0     # Genera splash screen nativo
+
+flutter:
+  uses-material-design: true
+
+# ── Configuración del ícono de la app ────────────────────────────────────────
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"   # 1024x1024 px PNG sin transparencia
+  min_sdk_android: 21
+  adaptive_icon_background: "#6C63FF"      # Color de fondo del ícono adaptativo
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+# ── Configuración del Splash Screen ──────────────────────────────────────────
+flutter_native_splash:
+  color: "#6C63FF"                         # Color de fondo del splash
+  image: assets/splash/splash_logo.png     # Logo centrado (300x300 px recomendado)
+  android: true
+  ios: true
+  android_12:
+    color: "#6C63FF"
+    image: assets/splash/splash_logo.png
