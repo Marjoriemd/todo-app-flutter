@@ -44,3 +44,24 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 .key.properties
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+*.g.dart
+
+# Android - credenciales de firma 
+android/key.properties
+android/*.jks
+android/*.keystore
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
